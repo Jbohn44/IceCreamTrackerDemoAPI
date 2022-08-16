@@ -71,8 +71,8 @@ namespace IceCreamTrackerApi
             
             // DI TODO: add interfaces to other repos for proper DI set up
             services.AddScoped<JwtHandler>();
-            services.AddScoped<UserRepository>();
-            services.AddScoped<IceCreamRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IIceCreamRepository, IceCreamRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             

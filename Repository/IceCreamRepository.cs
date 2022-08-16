@@ -7,10 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DomainModels;
 using System.Security.Cryptography.X509Certificates;
+using Repository.Interfaces;
 
 namespace Repository
 {
-    public class IceCreamRepository
+    public class IceCreamRepository : IIceCreamRepository
     {
         private IceCreamDataContext _context;
 

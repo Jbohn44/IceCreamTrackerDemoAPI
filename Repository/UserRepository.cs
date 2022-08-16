@@ -1,5 +1,6 @@
 ﻿using Data.DataModels;
 using Microsoft.EntityFrameworkCore;
+using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,7 +11,8 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class UserRepository
+    //TODO: Add Encryption/Decryption for user data stored - note login and passwords handled by google auth
+    public class UserRepository : IUserRepository
     {
         private Data.DataModels.IceCreamDataContext _context;
 
