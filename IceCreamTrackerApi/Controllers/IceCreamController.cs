@@ -10,6 +10,7 @@ using Data.DataModels;
 using IceCreamTrackerApi.Attributes;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Authorization;
+using Repository.Interfaces;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,11 +22,9 @@ namespace IceCreamTrackerApi.Controllers
     [ApiController]
     public class IceCreamController : ControllerBase
     {
-        private IceCreamRepository _iceCreamRepository;
-        private Data.DataModels.IceCreamDataContext _context;
-        public IceCreamController(IceCreamDataContext context, IceCreamRepository iceCreamRepository)
+        private IIceCreamRepository _iceCreamRepository;
+        public IceCreamController( IIceCreamRepository iceCreamRepository)
         {
-            _context = context;
             _iceCreamRepository = iceCreamRepository;
         }
         // GET: api/<IceCreamController>

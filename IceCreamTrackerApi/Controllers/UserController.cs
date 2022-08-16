@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using IceCreamTrackerApi.Attributes;
+using Repository.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,12 +22,10 @@ namespace IceCreamTrackerApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private UserRepository _userRepository;
-        private IceCreamDataContext context;
+        private IUserRepository _userRepository;
 
-        public UserController(IceCreamDataContext _context, UserRepository userRepository)
+        public UserController(IUserRepository userRepository)
         {
-            context = _context;
             _userRepository = userRepository;
         }
         // GET: api/<UserController>
