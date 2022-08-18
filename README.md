@@ -5,6 +5,8 @@
 
 ### Features
 * CRUD Functionality: Users can create, read, update, and delete ice cream reviews.
+* Custom Categories: Users can create custom categories and tag reviews
+* Google Login: Api authorization is based on google login credintials (valid token access)
 
 ### Technologies
 * .NET 5
