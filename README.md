@@ -11,4 +11,4 @@
 ### Technologies
 * .NET 5
 * Web Api
-* Entity Framework
+* Entity Framework Core
